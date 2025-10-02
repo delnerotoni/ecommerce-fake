@@ -1,22 +1,43 @@
 # 🛒 Ecommerce Fake Dashboard
 
-Projeto simples em **Python + Streamlit** que consome a [Fake Store API](https://fakestoreapi.com/), salva os resultados em CSV e exibe um dashboard interativo.
+Dashboard de e‑commerce desenvolvido em **Python + Streamlit**, consumindo a **Fake Store API**.  
+Permite explorar produtos, filtrar por categorias, traduzir títulos e descrições para português, adicionar itens ao carrinho, exportar resultados em CSV e simular um checkout.
+
+⚠️ **Status:** Este projeto está em **fase de desenvolvimento e testes**. Algumas funcionalidades podem mudar ou ser ajustadas nas próximas versões.
+
+---
+
+## ✨ Funcionalidades
+
+- 🔎 Busca de produtos direto da Fake Store API  
+- 🗂️ Filtros por categoria (traduzidas para PT‑BR)  
+- 🌐 Tradução automática de títulos e descrições (EN → PT)  
+- 🛍️ Carrinho de compras com controle de quantidade  
+- 💵 Totais em USD e BRL (conversão configurável)  
+- 💾 Exportação em CSV (carrinho e resultados filtrados)  
+- 💳 Simulação de checkout com link configurável  
+- 📱 Interface responsiva (desktop e mobile)  
+
+---
+
+## ☁️ Acesse o app no Streamlit Cloud
+
+Este projeto está publicado no **Streamlit Cloud**, sem necessidade de instalação local.  
+Basta acessar o link abaixo e usar direto no navegador (funciona em desktop 💻 e mobile 📱):
+
+👉 [Abrir o Dashboard no Streamlit Cloud](https://streamlit.io/cloud) <!-- substitua pelo link real do seu app -->
 
 ---
 
 ## 📂 Estrutura do projeto
 
-- 🗂️ **ecommerce-fake/** (pasta raiz do projeto)  
-  - 📁 **data/** → onde vão ficar os CSVs gerados  
-  - 📁 **src/** → código-fonte do projeto  
-    - 📁 **api/**  
-      - 📄 `product_search.py` → script que consulta a Fake Store API e salva CSV  
-    - 📁 **app/**  
-      - 📄 `app.py` → dashboard em Streamlit  
-  - 📄 **requirements.txt** → lista de dependências do projeto  
-  - 📄 **.env** → variáveis de ambiente (API URL, câmbio, checkout URL)  
-  - 📄 **README.md** → documentação do projeto  
-  - ⚠️ **.venv/** → ambiente virtual (não criar manualmente, será gerado pelo comando `python -m venv .venv`)  
+- 🗂️ **src/** → código-fonte do projeto  
+  - 📁 **api/** → scripts auxiliares (ex.: busca de produtos e geração de CSV)  
+  - 📁 **app/** → aplicação principal em Streamlit  
+- 📄 **requirements.txt** → lista de dependências  
+- 📄 **.env** → variáveis de ambiente (API URL, câmbio, checkout URL)  
+- 📄 **README.md** → documentação do projeto  
+- ⚠️ **.venv/** → ambiente virtual (não versionado)  
 
 ---
 
@@ -26,28 +47,23 @@ Projeto simples em **Python + Streamlit** que consome a [Fake Store API](https:/
 - 📊 Pandas  
 - 🌐 Requests  
 - 🔑 python-dotenv  
+- 🌍 Deep Translator  
 - 🎨 Streamlit  
 
 ---
 
-## ⚙️ Setup do projeto (Streamlit Cloud)
+## ⚙️ Setup local (opcional, para testes)
 
-Este projeto está publicado no **Streamlit Cloud**, então você não precisa instalar nada localmente.  
-Basta acessar o link abaixo e usar direto no navegador (funciona em desktop 💻 e mobile 📱):
+Se quiser rodar o projeto localmente em fase de testes:
 
-👉 [Abrir o Dashboard no Streamlit Cloud](https://streamlit.io/cloud) <!-- substitua pelo link real do seu app -->
+```bash
+git clone https://github.com/delnerotoni/ecommerce-fake.git
+cd ecommerce-fake
 
----
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# Linux/Mac
+source .venv/bin/activate
 
-### 🔑 Variáveis de ambiente
-
-No Streamlit Cloud, as variáveis do arquivo `.env` devem ser configuradas em:
-
-**Settings → Secrets**  
-
-Exemplo de configuração:
-
-```toml
-FAKESTORE_API_URL="https://fakestoreapi.com/products"
-USD_TO_BRL="5.5"
-STRIPE_CHECKOUT_URL="https://checkout.stripe.com/test"
+pip install -r requirements.txt
