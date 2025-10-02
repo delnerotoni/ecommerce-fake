@@ -52,6 +52,13 @@ Basta acessar o link abaixo e usar direto no navegador (funciona em desktop 💻
 
 ---
 
+---
+
+## 📖 Documentação adicional
+
+- [Roadmap do Projeto](./ROADMAP.md) → próximos passos e etapas planejadas
+
+
 ## ⚙️ Setup local (opcional, para testes)
 
 Se quiser rodar o projeto localmente em fase de testes:
