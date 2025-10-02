@@ -9,13 +9,15 @@ Este documento descreve as próximas etapas planejadas para o desenvolvimento do
 - Estrutura inicial do projeto criada  
 - Configuração do `.gitignore`  
 - Criação do `README.md` com instruções de uso  
+- Deploy inicial no **Streamlit Cloud**  
+- Teste de responsividade no **mobile** (OK)  
 
 ---
 
 ## 📌 Próximos passos imediatos
-- [ ] Realizar o **deploy no Streamlit Cloud** e atualizar o `README.md` com o link real  
-- [ ] Criar arquivo `.env.example` para facilitar o setup local  
-- [ ] Ajustar e validar o layout responsivo para mobile  
+- [ ] Criar arquivo `.env.example` para facilitar setup local  
+- [ ] Melhorar layout responsivo (ajustes finos em mobile e desktop)  
+- [ ] Revisar mensagens de feedback no app (ex.: carrinho vazio, filtros aplicados)  
 
 ---
 
