@@ -1,0 +1,8 @@
+# Dependências principais
+streamlit
+pandas
+requests
+python-dotenv
+
+# Tradução automática
+deep-translator
